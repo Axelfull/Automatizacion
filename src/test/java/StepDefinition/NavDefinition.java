@@ -20,4 +20,15 @@ public class NavDefinition {
         Assert.assertEquals(urlActual,url);
 
     }
+    @Given("se abre el navegador y se navega a {string}")
+    public void abrirNavegador2(String url) throws InterruptedException {
+
+        String nav = System.getProperty("nav", "default");
+        Navegador navegador = NavSelector.seleccionNavegador(nav);
+        DriverContext.setUp(navegador, url);
+        Thread.sleep(5000);
+        String urlActual = DriverContext.getDriver().getCurrentUrl();
+        System.out.println("URL Actual: "+ urlActual);
+        Assert.assertEquals(urlActual,url);
+    }
 }

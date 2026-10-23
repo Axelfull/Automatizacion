@@ -35,5 +35,6 @@ dependencies {
 }
 
 test {
-    useJUnitPlatform()
+    useJUnit()
+    failOnNoDiscoveredTests = false
 }

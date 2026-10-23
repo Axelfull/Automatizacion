@@ -12,12 +12,20 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 
 public class LoginDefinition {
-    private LoginPage loginPage = new LoginPage();
+    private final LoginPage loginPage = new LoginPage();
 
     @And("ingresar el usuario {string}")
     public void ingresarElUsuario(String nombreUsuario) {
-
         loginPage.escribirUsersname(nombreUsuario);
     }
 
+    @And("ingresar la pass {string}")
+    public void ingresarLaPass(String password) {
+        loginPage.escribirPassword(password);
+    }
+
+    @When("presiono el boton Submit")
+    public void presionoElBotonSubmit() {
+        loginPage.clickBtnSubmit();
+    }
 }

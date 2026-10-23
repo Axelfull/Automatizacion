@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Búsqueda y filtros de la lista de empleados" tests="3" skipped="0" failures="3" errors="0" timestamp="2026-10-21T18:55:58.843Z" hostname="CL-FT7XX33" time="187.706">
+  <properties/>
+  <testcase name="Search employees using all available PIM filters #1" classname="Búsqueda y filtros de la lista de empleados" time="67.872">
+    <failure message="org.opentest4j.AssertionFailedError: Error al escribir en el campo Nombre del empleado: Expected condition failed: waiting for visibility of Proxy element for: AjaxElementLocator 'By.xpath: //label[normalize-space()='Employee Name']/ancestor::div[contains(@class,'oxd-input-group')][1]//input' (tried for 10 second(s) with 500 milliseconds interval)" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Error al escribir en el campo Nombre del empleado: Expected condition failed: waiting for visibility of Proxy element for: AjaxElementLocator 'By.xpath: //label[normalize-space()='Employee Name']/ancestor::div[contains(@class,'oxd-input-group')][1]//input' (tried for 10 second(s) with 500 milliseconds interval)
+	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:134)
+	at app//ObjectPage.PimPage.escribirNombreEmp(PimPage.java:64)
+	at app//StepDefinition.PimDefinition.ingresarNombreEmployee(PimDefinition.java:80)
+	at ✽.the user enters employee name &quot;Amelia&quot;(file:///C:/Users/arivasrodriguez2/Downloads/cosas%20automatizacion/simpleTestAutomation/src/test/resources/features/orange.feature:48)
+</failure>
+  </testcase>
+  <testcase name="Search employees using all available PIM filters #2" classname="Búsqueda y filtros de la lista de empleados" time="60.925">
+    <failure message="org.opentest4j.AssertionFailedError: Error al escribir en el campo Nombre del empleado: Expected condition failed: waiting for visibility of Proxy element for: AjaxElementLocator 'By.xpath: //label[normalize-space()='Employee Name']/ancestor::div[contains(@class,'oxd-input-group')][1]//input' (tried for 10 second(s) with 500 milliseconds interval)" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Error al escribir en el campo Nombre del empleado: Expected condition failed: waiting for visibility of Proxy element for: AjaxElementLocator 'By.xpath: //label[normalize-space()='Employee Name']/ancestor::div[contains(@class,'oxd-input-group')][1]//input' (tried for 10 second(s) with 500 milliseconds interval)
+	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:134)
+	at app//ObjectPage.PimPage.escribirNombreEmp(PimPage.java:64)
+	at app//StepDefinition.PimDefinition.ingresarNombreEmployee(PimDefinition.java:80)
+	at ✽.the user enters employee name &quot;James&quot;(file:///C:/Users/arivasrodriguez2/Downloads/cosas%20automatizacion/simpleTestAutomation/src/test/resources/features/orange.feature:48)
+</failure>
+  </testcase>
+  <testcase name="Search employees using all available PIM filters #3" classname="Búsqueda y filtros de la lista de empleados" time="58.908">
+    <failure message="org.opentest4j.AssertionFailedError: Error al escribir en el campo Nombre del empleado: Expected condition failed: waiting for visibility of Proxy element for: AjaxElementLocator 'By.xpath: //label[normalize-space()='Employee Name']/ancestor::div[contains(@class,'oxd-input-group')][1]//input' (tried for 10 second(s) with 500 milliseconds interval)" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Error al escribir en el campo Nombre del empleado: Expected condition failed: waiting for visibility of Proxy element for: AjaxElementLocator 'By.xpath: //label[normalize-space()='Employee Name']/ancestor::div[contains(@class,'oxd-input-group')][1]//input' (tried for 10 second(s) with 500 milliseconds interval)
+	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:134)
+	at app//ObjectPage.PimPage.escribirNombreEmp(PimPage.java:64)
+	at app//StepDefinition.PimDefinition.ingresarNombreEmployee(PimDefinition.java:80)
+	at ✽.the user enters employee name &quot;Linda&quot;(file:///C:/Users/arivasrodriguez2/Downloads/cosas%20automatizacion/simpleTestAutomation/src/test/resources/features/orange.feature:48)
+</failure>
+  </testcase>
+  <system-out><![CDATA[
+@PIM @PIM @TC-004
+Scenario Outline: Search employees using all available PIM filters                                              # src/test/resources/features/orange.feature:59
+Driver context -> Navegador:Chrome
+
+Sistema Operativo :windows 11, 10.0
+
+Navegador :Chrome
+Chrome seleccionado
+URL Actual: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+  Given se abre el navegador y se navega a "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login" # StepDefinition.NavDefinition.abrirNavegador2(java.lang.String)
+
+    Embedding [SUCCESS] Step ScreenShots [image/png 79534 bytes]
+
+Es visible el elemento web 
+Es visible el elemento web 
+Es visible el elemento web Login
+  And que el usuario inicia sesiÃ³n en OrangeHRM con el usuario "Admin" y la contraseÃ±a "admin123"               # StepDefinition.OrangeDefinition.login(java.lang.String,java.lang.String)
+
+    Embedding [SUCCESS] Step ScreenShots [image/png 6643 bytes]
+
+  And que el usuario ingresa al mÃ³dulo PIM                                                                      # StepDefinition.PimDefinition.ingresarModuloPim()
+
+    Embedding [SUCCESS] Step ScreenShots [image/png 120620 bytes]
+
+  When the user enters employee name "Amelia"                                                                   # StepDefinition.PimDefinition.ingresarNombreEmployee(java.lang.String)
+      org.opentest4j.AssertionFailedError: Error al escribir en el campo Nombre del empleado: Expected condition failed: waiting for visibility of Proxy element for: AjaxElementLocator 'By.xpath: //label[normalize-space()='Employee Name']/ancestor::div[contains(@class,'oxd-input-group')][1]//input' (tried for 10 second(s) with 500 milliseconds interval)
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:134)
+	at ObjectPage.PimPage.escribirNombreEmp(PimPage.java:64)
+	at StepDefinition.PimDefinition.ingresarNombreEmployee(PimDefinition.java:80)
+	at âœ½.the user enters employee name "Amelia"(file:///C:/Users/arivasrodriguez2/Downloads/cosas%20automatizacion/simpleTestAutomation/src/test/resources/features/orange.feature:48)
+
+
+    Embedding [FAIL] Step ScreenShots [image/png 133641 bytes]
+
+  And the user enters employee id "0001"                                                                        # StepDefinition.PimDefinition.ingresarEmployeeId(java.lang.String)
+  And the user selects employment status "Full-Time Permanent"                                                  # StepDefinition.PimDefinition.seleccionarEmploymentStatus(java.lang.String)
+  And the user selects include option "Current Employees Only"                                                  # StepDefinition.PimDefinition.seleccionarIncludeOption(java.lang.String)
+  And the user selects job title "Account Assistant"                                                            # StepDefinition.PimDefinition.seleccionarJobTitle(java.lang.String)
+  And the user selects sub unit "Administration"                                                                # StepDefinition.PimDefinition.seleccionarSubUnit(java.lang.String)
+  And the user selects supervisor "John Smith"                                                                  # StepDefinition.PimDefinition.seleccionarSupervisor(java.lang.String)
+  And clicks Search                                                                                             # StepDefinition.PimDefinition.clickSearch()
+  Then every result should match all selected criteria                                                          # StepDefinition.PimDefinition.validarResultadosFiltros()
+
+@PIM @PIM @TC-004
+Scenario Outline: Search employees using all available PIM filters                                              # src/test/resources/features/orange.feature:60
+Driver context -> Navegador:Chrome
+
+Sistema Operativo :windows 11, 10.0
+
+Navegador :Chrome
+Chrome seleccionado
+URL Actual: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+  Given se abre el navegador y se navega a "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login" # StepDefinition.NavDefinition.abrirNavegador2(java.lang.String)
+
+    Embedding [SUCCESS] Step ScreenShots [image/png 79534 bytes]
+
+Es visible el elemento web 
+Es visible el elemento web 
+Es visible el elemento web Login
+  And que el usuario inicia sesiÃ³n en OrangeHRM con el usuario "Admin" y la contraseÃ±a "admin123"               # StepDefinition.OrangeDefinition.login(java.lang.String,java.lang.String)
+
+    Embedding [SUCCESS] Step ScreenShots [image/png 6643 bytes]
+
+  And que el usuario ingresa al mÃ³dulo PIM                                                                      # StepDefinition.PimDefinition.ingresarModuloPim()
+
+    Embedding [SUCCESS] Step ScreenShots [image/png 120636 bytes]
+
+  When the user enters employee name "James"                                                                    # StepDefinition.PimDefinition.ingresarNombreEmployee(java.lang.String)
+      org.opentest4j.AssertionFailedError: Error al escribir en el campo Nombre del empleado: Expected condition failed: waiting for visibility of Proxy element for: AjaxElementLocator 'By.xpath: //label[normalize-space()='Employee Name']/ancestor::div[contains(@class,'oxd-input-group')][1]//input' (tried for 10 second(s) with 500 milliseconds interval)
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:134)
+	at ObjectPage.PimPage.escribirNombreEmp(PimPage.java:64)
+	at StepDefinition.PimDefinition.ingresarNombreEmployee(PimDefinition.java:80)
+	at âœ½.the user enters employee name "James"(file:///C:/Users/arivasrodriguez2/Downloads/cosas%20automatizacion/simpleTestAutomation/src/test/resources/features/orange.feature:48)
+
+
+    Embedding [FAIL] Step ScreenShots [image/png 133688 bytes]
+
+  And the user enters employee id "0002"                                                                        # StepDefinition.PimDefinition.ingresarEmployeeId(java.lang.String)
+  And the user selects employment status "Full-Time Contract"                                                   # StepDefinition.PimDefinition.seleccionarEmploymentStatus(java.lang.String)
+  And the user selects include option "Current and Past Employees"                                              # StepDefinition.PimDefinition.seleccionarIncludeOption(java.lang.String)
+  And the user selects job title "Automation Engineer L000"                                                     # StepDefinition.PimDefinition.seleccionarJobTitle(java.lang.String)
+  And the user selects sub unit "Engineering"                                                                   # StepDefinition.PimDefinition.seleccionarSubUnit(java.lang.String)
+  And the user selects supervisor "Peter Anderson"                                                              # StepDefinition.PimDefinition.seleccionarSupervisor(java.lang.String)
+  And clicks Search                                                                                             # StepDefinition.PimDefinition.clickSearch()
+  Then every result should match all selected criteria                                                          # StepDefinition.PimDefinition.validarResultadosFiltros()
+
+@PIM @PIM @TC-004
+Scenario Outline: Search employees using all available PIM filters                                              # src/test/resources/features/orange.feature:61
+Driver context -> Navegador:Chrome
+
+Sistema Operativo :windows 11, 10.0
+
+Navegador :Chrome
+Chrome seleccionado
+URL Actual: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+  Given se abre el navegador y se navega a "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login" # StepDefinition.NavDefinition.abrirNavegador2(java.lang.String)
+
+    Embedding [SUCCESS] Step ScreenShots [image/png 79534 bytes]
+
+Es visible el elemento web 
+Es visible el elemento web 
+Es visible el elemento web Login
+  And que el usuario inicia sesiÃ³n en OrangeHRM con el usuario "Admin" y la contraseÃ±a "admin123"               # StepDefinition.OrangeDefinition.login(java.lang.String,java.lang.String)
+
+    Embedding [SUCCESS] Step ScreenShots [image/png 6643 bytes]
+
+  And que el usuario ingresa al mÃ³dulo PIM                                                                      # StepDefinition.PimDefinition.ingresarModuloPim()
+
+    Embedding [SUCCESS] Step ScreenShots [image/png 120636 bytes]
+
+  When the user enters employee name "Linda"                                                                    # StepDefinition.PimDefinition.ingresarNombreEmployee(java.lang.String)
+      org.opentest4j.AssertionFailedError: Error al escribir en el campo Nombre del empleado: Expected condition failed: waiting for visibility of Proxy element for: AjaxElementLocator 'By.xpath: //label[normalize-space()='Employee Name']/ancestor::div[contains(@class,'oxd-input-group')][1]//input' (tried for 10 second(s) with 500 milliseconds interval)
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:134)
+	at ObjectPage.PimPage.escribirNombreEmp(PimPage.java:64)
+	at StepDefinition.PimDefinition.ingresarNombreEmployee(PimDefinition.java:80)
+	at âœ½.the user enters employee name "Linda"(file:///C:/Users/arivasrodriguez2/Downloads/cosas%20automatizacion/simpleTestAutomation/src/test/resources/features/orange.feature:48)
+
+
+    Embedding [FAIL] Step ScreenShots [image/png 133688 bytes]
+
+  And the user enters employee id "0003"                                                                        # StepDefinition.PimDefinition.ingresarEmployeeId(java.lang.String)
+  And the user selects employment status "Part-Time Contract"                                                   # StepDefinition.PimDefinition.seleccionarEmploymentStatus(java.lang.String)
+  And the user selects include option "Past Employees Only"                                                     # StepDefinition.PimDefinition.seleccionarIncludeOption(java.lang.String)
+  And the user selects job title "Automation Tester"                                                            # StepDefinition.PimDefinition.seleccionarJobTitle(java.lang.String)
+  And the user selects sub unit "Development"                                                                   # StepDefinition.PimDefinition.seleccionarSubUnit(java.lang.String)
+  And the user selects supervisor "Linda Brown"                                                                 # StepDefinition.PimDefinition.seleccionarSupervisor(java.lang.String)
+  And clicks Search                                                                                             # StepDefinition.PimDefinition.clickSearch()
+  Then every result should match all selected criteria                                                          # StepDefinition.PimDefinition.validarResultadosFiltros()
+]]></system-out>
+  <system-err><![CDATA[oct. 21, 2026 3:56:02 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 155
+oct. 21, 2026 3:56:02 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 155.0.8059.85. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.30.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+oct. 21, 2026 3:57:08 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 155
+oct. 21, 2026 3:57:08 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 155.0.8059.85. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.30.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+oct. 21, 2026 3:58:09 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 155
+oct. 21, 2026 3:58:09 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 155.0.8059.85. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.30.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+</testsuite>
